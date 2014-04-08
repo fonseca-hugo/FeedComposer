@@ -13,8 +13,10 @@ Features
 ========
 
 FeedComposer allows to add Comments, Photos, Mention people and use Hashtags. Photos can be uploaded via the input selection or drag and drop.
-*This is not a Standalone library or a Plugin, it's a working proof of concept of a Feed Composer. You can use it, but it may require you to build the backend, as well as to do tweaks to integrate on your code.
-*Only the most recent browsers are supported
+
+*\*This is not a Standalone library or a Plugin, it's a working proof of concept of a Feed Composer. You can use it, but it may require you to build the backend, as well as to do tweaks to integrate on your code.*
+
+*\*Only the most recent browsers are supported*
 
 Usage
 ========
@@ -60,15 +62,6 @@ HFFC.setup({
 });
 </pre>
 
-composerWrapper: '.feed-composer-wrapper',
-            composer: '.feed-composer',
-            dropZoneWrapper: '.js-drop-files',
-            dropZone: '.drop-zone',
-            maxFileSize: 3145728, // 3MB
-            maxFileNumber: 10,
-            mentionTemplate: '<div class="mention-item" data-name="{{name}}" data-id="{{id}}"><img src="{{avatar_url}}" alt=""/>{{name}}</div>',
-            thumbnailTemplate: '<div class="thumbnail" data-id="{{id}}"><a href="#" class="close">&times;</a><div class="progress"><div class="bar progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div><img src="{{img}}" alt=""></div>',
-            postTemplate
 
 List of options and description:
 
