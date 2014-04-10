@@ -634,7 +634,7 @@ HFFC = (function () {
                 updateInput = false;
 
             if (key === 8) {
-                if (selRange.end === selRange.start) {
+                if (selRange.start && selRange.end === selRange.start) {
                     selRange.start -= 1;
                 }
             } else if (key === 46) {
@@ -686,7 +686,8 @@ HFFC = (function () {
             newCursorPos = (newCursorPos < 0) ? selStart : newCursorPos;
 
             if (!updateInput) { // then update mentions Format
-                if (key === 8 || key === 46) {
+             if ((key === 8 && (selRange.start || selRange.end)) // Backspace and if not first position
+                || key === 46) {
                     tempCopy = formData.mentionsFormat.slice(0, selStart) + formData.mentionsFormat.slice(selEnd);
                     formData.mentionsFormat = tempCopy;
                     formData = HFFC.updateMentionsPositions(formData, posToUpdate, -1, -1);
